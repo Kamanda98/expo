@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        /* Top navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #253fff;
+            padding: 10px 20px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar-logo img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .navigation {
+            text-align: center;
+        }
+        /* Style for navigation buttons */
+        .nav-button, button {
+            display: inline-block;
+            padding: 10px 20px;
+            width: 150px; /* Set a fixed width for all buttons */
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none; /* Remove button border */
+            outline: none; /* Remove button outline */
+        }
+
+        .nav-button:hover, button:hover {
+            background-color: #00b321;
+        }
+        .navbar-menu {
+            float: right;
+        }
+
+        .navbar-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-menu li {
+            display: inline;
+        }
+
+        .navbar-menu a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .navbar-menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #848484;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            display: flex; /* Center-align the container */
+            flex-direction: column; /* Arrange items vertically */
+            align-items: center; /* Center-align items vertically */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: left; 
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-logo">
+            <img src="krystallogo2.png" alt="Logo">
+            Your Logo Text
+        </a>
+        <div class="navbar-menu">
+           <li> <a href="#">Home</a></li>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <h1>Order Form</h1>
+
+    <div class="container">
+        <form action="thankyou.html" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Delivery Location:</label>
+                <input type="text" id="location" name="location">
+            </div>
+
+            <button type="submit">Submit Order</button>
+            
+        </form>
+    </div>
+    <script>
+        // Add an event listener to the form for submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission behavior
+
+            // Assuming the form is successfully submitted, redirect to thankyou.html
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+    
+</body>
+</html>
